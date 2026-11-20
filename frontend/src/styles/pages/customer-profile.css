@@ -1,0 +1,447 @@
+
+/* ==========================================
+   LUMINEST — CUSTOMER PROFILE
+   Premium Inside Sales Workspace
+========================================== */
+
+.lm-customer-profile {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 30px 36px 50px;
+  color: #172b4d;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.lm-customer-profile *,
+.lm-customer-profile *::before,
+.lm-customer-profile *::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.lm-profile-header {
+  margin-bottom: 25px;
+}
+
+.lm-profile-back {
+  display: block;
+  margin-bottom: 24px;
+  padding: 9px 14px;
+  border: 1px solid #d5dfec;
+  border-radius: 8px;
+  background: #fff;
+  color: #315984;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lm-profile-back:hover {
+  border-color: #91aaca;
+  background: #f2f6fc;
+}
+
+.lm-profile-header > span {
+  color: #526985;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.lm-profile-header h1 {
+  margin: 9px 0;
+  color: #17365f;
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.lm-profile-header p {
+  margin: 0;
+  color: #52647d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Cards */
+
+.lm-profile-card {
+  margin-bottom: 22px;
+  padding: 24px;
+  border: 1px solid #dce5ef;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(25, 54, 94, 0.045);
+}
+
+.lm-profile-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.lm-profile-card-heading h2 {
+  margin: 0;
+  color: #19395f;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.lm-profile-card-heading p {
+  margin: 6px 0 0;
+  color: #62758f;
+  font-size: 12px;
+}
+
+/* Status */
+
+.lm-profile-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #eaf2ff;
+  color: #315f98;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+/* Customer information */
+
+.lm-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 22px;
+}
+
+.lm-profile-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.lm-profile-grid > div > span {
+  color: #647790;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lm-profile-grid > div > strong {
+  color: #263f60;
+  font-size: 13px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.lm-profile-grid .lm-profile-notes {
+  grid-column: 1 / -1;
+  padding-top: 17px;
+  border-top: 1px solid #e7edf5;
+}
+
+.lm-profile-notes p {
+  margin: 0;
+  color: #435a76;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* Record call section */
+
+.lm-profile-call-section {
+  margin-bottom: 22px;
+}
+
+.lm-profile-record-call {
+  min-height: 44px;
+  padding: 0 19px;
+  border: 1px solid #244e7e;
+  border-radius: 8px;
+  background: #244e7e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lm-profile-record-call:hover {
+  border-color: #173a65;
+  background: #173a65;
+  box-shadow: 0 4px 12px rgba(36, 78, 126, 0.17);
+}
+
+/* Refresh */
+
+.lm-profile-refresh {
+  padding: 9px 13px;
+  border: 1px solid #d5dfec;
+  border-radius: 8px;
+  background: #fff;
+  color: #315984;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.lm-profile-refresh:hover {
+  background: #f2f6fc;
+  border-color: #91aaca;
+}
+
+.lm-profile-refresh:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Timeline */
+
+.lm-profile-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 10px;
+}
+
+.lm-profile-timeline-item {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding: 0 0 25px;
+}
+
+.lm-profile-timeline-item:not(:last-child)::before {
+  position: absolute;
+  top: 13px;
+  bottom: 0;
+  left: 5px;
+  width: 2px;
+  background: #dce6f2;
+  content: "";
+}
+
+.lm-profile-timeline-dot {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+  border: 3px solid #dceafe;
+  border-radius: 50%;
+  background: #315f98;
+}
+
+.lm-profile-timeline-content {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 17px;
+  border: 1px solid #e1e8f1;
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+
+.lm-profile-timeline-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lm-profile-timeline-heading strong {
+  color: #1e3d65;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.lm-profile-timeline-heading > span {
+  color: #647790;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.lm-profile-call-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 18px;
+  margin-top: 11px;
+}
+
+.lm-profile-call-meta span {
+  color: #526985;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.lm-profile-timeline-content > p {
+  margin: 12px 0 0;
+  color: #435a76;
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.lm-profile-followup {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #fff4e5;
+  color: #986324;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Loading and empty states */
+
+.lm-profile-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 170px;
+  padding: 25px;
+  color: #62758f;
+  text-align: center;
+}
+
+.lm-profile-state > span {
+  color: #527eaf;
+  font-size: 34px;
+}
+
+.lm-profile-state h3 {
+  margin: 10px 0 0;
+  color: #29466d;
+  font-size: 15px;
+}
+
+.lm-profile-state p {
+  margin: 7px 0 0;
+  color: #647790;
+  font-size: 12px;
+}
+
+.lm-profile-error {
+  padding: 15px;
+  border: 1px solid #efcccc;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #a43f3f;
+  font-size: 12px;
+}
+
+.lm-profile-error button {
+  padding: 7px 12px;
+  border: 1px solid #e9caca;
+  border-radius: 7px;
+  background: #fff;
+  color: #a43f3f;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .lm-profile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .lm-customer-profile {
+    padding: 23px 16px 35px;
+  }
+
+  .lm-profile-header h1 {
+    font-size: 26px;
+  }
+
+  .lm-profile-card {
+    padding: 18px;
+  }
+
+  .lm-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lm-profile-grid .lm-profile-notes {
+    grid-column: auto;
+  }
+
+  .lm-profile-card-heading {
+    align-items: flex-start;
+  }
+
+  .lm-profile-timeline-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* Latest customer interest status */
+
+.lm-profile-interest-interested {
+  background: #e8f6ed;
+  color: #237747;
+  border: 1px solid #c7e8d2;
+}
+
+.lm-profile-interest-not-interested {
+  background: #fff0f0;
+  color: #ad4141;
+  border: 1px solid #f0cccc;
+}
+
+.lm-profile-interest-thinking {
+  background: #fff6e7;
+  color: #98691e;
+  border: 1px solid #f0dfb9;
+}
+
+.lm-profile-interest-callback {
+  background: #edf3ff;
+  color: #345f9b;
+  border: 1px solid #cbdcf4;
+}
+
+.lm-profile-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+
+.lm-profile-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.lm-profile-schedule-visit {
+  background: #294c78;
+  border-color: #294c78;
+  color: #ffffff;
+}
+
+.lm-profile-schedule-visit:hover {
+  background: #1e3d65;
+  border-color: #1e3d65;
+}

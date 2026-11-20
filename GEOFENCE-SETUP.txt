@@ -1,0 +1,28 @@
+LUMINEST INSIDE SALES 200-METRE GEOFENCE
+
+TEMPORARY TEST OFFICE (NOT AN OFFICIAL BUSINESS ADDRESS)
+Latitude: 13.0827
+Longitude: 80.2707
+Radius: 200 metres
+Location label: Chennai Central, Chennai, Tamil Nadu
+
+CONFIGURATION
+Set these variables in the backend/.env file (same folder as backend/package.json):
+OFFICE_LATITUDE=13.0827
+OFFICE_LONGITUDE=80.2707
+OFFICE_RADIUS_METERS=200
+
+When the official office is selected, replace only OFFICE_LATITUDE and OFFICE_LONGITUDE and restart the backend.
+
+BEHAVIOUR
+- Only inside_sales login is checked against the office radius.
+- Admin, executive and outside_sales login are not geofenced.
+- Inside Sales login requires browser GPS permission and sends coordinates to the backend.
+- Every protected API request checks the latest browser location headers.
+- The browser watches location changes. If location permission is lost or the employee is outside the radius, the attendance session is closed and the UI logs the employee out.
+- Attendance records store login time, logout time, login location, last location and logout reason.
+
+IMPORTANT LIMITATIONS
+- Browser geolocation requires localhost or HTTPS and user permission.
+- Browser-based geofencing is not tamper-proof. For stronger enforcement, use a managed device/native app and server-side device controls. A web page cannot guarantee immediate detection if the browser/device is offline, suspended or GPS is spoofed.
+- This temporary coordinate is for testing only. Do not treat it as the company's actual office.

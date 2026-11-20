@@ -1,0 +1,318 @@
+
+.lm-visit-scheduler {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 18px;
+  padding: 28px;
+  color: #263b56;
+  font-family: Inter, sans-serif;
+  box-shadow: 0 12px 35px rgba(31, 53, 81, 0.07);
+}
+
+.lm-visit-scheduler-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.lm-visit-scheduler-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #66809f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.lm-visit-scheduler-header h2 {
+  margin: 0;
+  color: #1d304b;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.lm-visit-scheduler-header p {
+  margin: 8px 0 0;
+  color: #718198;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.lm-visit-scheduler-close {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border: 1px solid #e2e9f1;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #526781;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lm-visit-scheduler-close:hover {
+  background: #eaf0f7;
+  color: #1d304b;
+}
+
+.lm-visit-customer-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 19px;
+  margin-bottom: 29px;
+  background: #f2f6fb;
+  border: 1px solid #e4ebf4;
+  border-radius: 13px;
+}
+
+.lm-visit-customer-avatar {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #dce8f7;
+  color: #294c78;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.lm-visit-customer-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lm-visit-customer-summary div span {
+  color: #74869d;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.lm-visit-customer-summary strong {
+  color: #243a57;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.lm-visit-customer-summary small {
+  color: #708198;
+  font-size: 11px;
+}
+
+.lm-visit-scheduler-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.lm-visit-form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.lm-visit-form-section-title > span {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #eaf1fa;
+  color: #365a87;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.lm-visit-form-section-title h3 {
+  margin: 0;
+  color: #263b56;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.lm-visit-form-section-title p {
+  margin: 4px 0 0;
+  color: #8290a3;
+  font-size: 11px;
+}
+
+.lm-visit-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px;
+  margin-top: -10px;
+}
+
+.lm-visit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.lm-visit-field-full {
+  grid-column: 1 / -1;
+}
+
+.lm-visit-field > span {
+  color: #3b506b;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.lm-visit-field > span small {
+  color: #8a98aa;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.lm-visit-field input,
+.lm-visit-field select,
+.lm-visit-field textarea {
+  width: 100%;
+  min-height: 45px;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #dce4ee;
+  border-radius: 9px;
+  outline: none;
+  background: #fbfcfe;
+  color: #30445f;
+  font-family: inherit;
+  font-size: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lm-visit-field textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.lm-visit-field input::placeholder,
+.lm-visit-field textarea::placeholder {
+  color: #a0adbc;
+}
+
+.lm-visit-field input:focus,
+.lm-visit-field select:focus,
+.lm-visit-field textarea:focus {
+  border-color: #6488b5;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(81, 122, 173, 0.11);
+}
+
+.lm-visit-field select:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.lm-visit-form-message {
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.lm-visit-form-message.error {
+  border: 1px solid #f0d0d0;
+  background: #fff4f4;
+  color: #a53e3e;
+}
+
+.lm-visit-form-message.success {
+  border: 1px solid #cce8d6;
+  background: #effaf3;
+  color: #287448;
+}
+
+.lm-visit-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 11px;
+  padding-top: 19px;
+  border-top: 1px solid #edf1f6;
+}
+
+.lm-visit-cancel-button,
+.lm-visit-submit-button {
+  min-height: 43px;
+  padding: 0 19px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lm-visit-cancel-button {
+  border: 1px solid #dce4ee;
+  background: #ffffff;
+  color: #526780;
+}
+
+.lm-visit-cancel-button:hover {
+  background: #f3f6fa;
+}
+
+.lm-visit-submit-button {
+  border: 1px solid #294c78;
+  background: #294c78;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(41, 76, 120, 0.14);
+}
+
+.lm-visit-submit-button:hover:not(:disabled) {
+  background: #1e3d65;
+  transform: translateY(-1px);
+}
+
+.lm-visit-submit-button:disabled,
+.lm-visit-cancel-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+@media (max-width: 640px) {
+  .lm-visit-scheduler {
+    padding: 19px;
+    border-radius: 14px;
+  }
+
+  .lm-visit-scheduler-header h2 {
+    font-size: 19px;
+  }
+
+  .lm-visit-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lm-visit-field-full {
+    grid-column: auto;
+  }
+
+  .lm-visit-form-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .lm-visit-cancel-button,
+  .lm-visit-submit-button {
+    width: 100%;
+  }
+}

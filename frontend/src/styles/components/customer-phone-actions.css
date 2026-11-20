@@ -1,0 +1,7 @@
+.lm-customer-phone-actions{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px}.lm-customer-phone-masked{color:inherit;font-variant-numeric:tabular-nums;white-space:nowrap}.lm-customer-phone-call{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:30px;padding:5px 10px;border:1px solid #b7e4c7;border-radius:7px;background:#f0fdf4;color:#166534;font-size:12px;font-weight:650;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer}.lm-customer-phone-call:hover{background:#dcfce7;border-color:#86d6a2}.lm-customer-phone-call:focus-visible{outline:2px solid #15803d;outline-offset:2px}
+.lm-customer-phone-actions,
+.lm-customer-phone-actions * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}

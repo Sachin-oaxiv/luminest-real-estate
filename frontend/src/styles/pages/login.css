@@ -1,0 +1,751 @@
+/* ========================================
+   LUMINEST - LOGIN PAGE
+======================================== */
+
+.luminest-login {
+  --luminest-navy: #0f2d5c;
+  --luminest-blue: #2563eb;
+  --luminest-text: #172b4d;
+  --luminest-muted: #7b8799;
+
+  display: grid;
+  grid-template-columns: 55% 45%;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* ========================================
+   LEFT IMAGE PANEL
+======================================== */
+
+.login-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  min-width: 0;
+  min-height: 100vh;
+  padding: 32px 6%;
+
+  overflow: hidden;
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(8, 34, 69, 0.12) 0%,
+      rgba(8, 34, 69, 0.02) 45%,
+      rgba(5, 24, 49, 0.78) 100%
+    ),
+    url("/images/luminest-login-building.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(10, 39, 77, 0.15),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+/* ========================================
+   BRAND LOGO
+======================================== */
+
+.login-brand-header,
+.login-hero-content,
+.login-visual-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.luminest-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: inherit;
+}
+
+.luminest-mark {
+  width: 88px;
+  height: 58px;
+  flex-shrink: 0;
+}
+
+.luminest-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.luminest-wordmark span {
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.luminest-wordmark small {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* ========================================
+   LEFT HEADLINE
+======================================== */
+
+.login-hero-content {
+  width: 100%;
+  max-width: 480px;
+  margin-top: auto;
+  margin-bottom: 38px;
+}
+
+.login-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #d8e4f5;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.login-hero-content h1 {
+  margin: 0;
+  font-size: clamp(36px, 3.8vw, 52px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.login-hero-content p {
+  margin: 14px 0 22px;
+  color: #e2e9f3;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.login-slide-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-slide-indicator span {
+  width: 38px;
+  height: 5px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.login-slide-indicator i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* ========================================
+   LEFT FOOTER
+======================================== */
+
+.login-visual-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+/* ========================================
+   RIGHT FORM PANEL
+======================================== */
+
+.login-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 0;
+  min-height: 100vh;
+  padding: 28px clamp(28px, 5vw, 75px);
+
+  background: #ffffff;
+}
+
+.login-top-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--luminest-navy);
+}
+
+.login-top-brand .luminest-brand {
+  gap: 8px;
+}
+
+.login-top-brand .luminest-mark {
+  width: 42px;
+  height: 35px;
+}
+
+.login-top-brand .luminest-wordmark span {
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.login-top-brand .luminest-wordmark small {
+  font-size: 7px;
+  letter-spacing: 3px;
+}
+
+.login-top-brand > span {
+  color: var(--luminest-muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+/* ========================================
+   LOGIN FORM CONTAINER
+======================================== */
+
+.login-form-container {
+  width: 100%;
+  max-width: 390px;
+  margin: 16px auto;
+}
+
+/* ========================================
+   FORM HEADING
+======================================== */
+
+.login-heading h2 {
+  margin: 10px 0 14px;
+  color: var(--luminest-navy);
+  font-size: clamp(28px, 2.5vw, 34px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.login-heading h2 span {
+  color: #426b9b;
+}
+
+.login-heading p {
+  margin: 0 0 32px;
+  color: var(--luminest-muted);
+  font-size: 13px;
+}
+
+/* ========================================
+   INPUT FIELDS
+======================================== */
+
+.luminest-form-group {
+  margin-bottom: 27px !important;
+}
+
+.luminest-form-group > label {
+  display: block;
+  margin-bottom: 7px;
+  color: #26364d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.luminest-input-wrapper {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 13px;
+  gap: 11px;
+
+  border: 1px solid #d9e0eb;
+  border-radius: 9px;
+  background: #ffffff;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.luminest-input-wrapper:focus-within {
+  border-color: var(--luminest-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.09);
+}
+
+.luminest-input-wrapper > svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  color: #526782;
+}
+
+.luminest-input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--luminest-text);
+  font-size: 13px;
+}
+
+.luminest-input-wrapper input::placeholder {
+  color: #9aa5b5;
+}
+
+.luminest-password-toggle {
+  flex-shrink: 0;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  color: var(--luminest-blue);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ========================================
+   REMEMBER ME AND FORGOT PASSWORD
+======================================== */
+
+.login-form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0 30px !important;
+}
+
+.remember-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #526078;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remember-option input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--luminest-blue);
+  cursor: pointer;
+}
+
+.forgot-password-label {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--luminest-blue);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.forgot-password-label:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   SIGN IN BUTTON
+======================================== */
+
+.luminest-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  width: 100%;
+  height: 49px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: var(--luminest-navy);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.luminest-login-button:hover:not(:disabled) {
+  background: #1c477d;
+  transform: translateY(-1px);
+}
+
+.luminest-login-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.luminest-login-button span {
+  font-size: 20px;
+}
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.login-error {
+  margin-bottom: 16px;
+  padding: 11px 13px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+/* ========================================
+   SECURITY NOTE
+======================================== */
+
+.login-security-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 22px;
+  color: #8793a5;
+  font-size: 11px;
+}
+
+.security-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #31966b;
+}
+
+/* ========================================
+   COPYRIGHT
+======================================== */
+
+.login-copyright {
+  color: #9aa4b2;
+  font-size: 9px;
+  text-align: center;
+}
+
+/* ========================================
+   DESKTOP FULL SCREEN LAYOUT
+======================================== */
+
+@media (min-width: 769px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .luminest-login {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .login-visual,
+  .login-form-panel {
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .login-visual {
+    padding: 28px 6%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .login-hero-content {
+    margin-top: auto;
+    margin-bottom: 28px;
+  }
+
+  .login-form-panel {
+    padding: 22px clamp(24px, 4vw, 65px);
+  }
+
+  .login-form-container {
+    margin: 10px auto;
+  }
+}
+
+/* ========================================
+   SHORT DESKTOP SCREENS
+======================================== */
+
+@media (min-width: 769px) and (max-height: 720px) {
+  .login-visual {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .luminest-mark {
+    width: 68px;
+    height: 45px;
+  }
+
+  .luminest-wordmark span {
+    font-size: 23px;
+  }
+
+  .login-hero-content {
+    margin-bottom: 16px;
+  }
+
+  .login-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .login-hero-content p {
+    margin: 8px 0 12px;
+    font-size: 13px;
+  }
+
+  .login-form-panel {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .login-form-container {
+    margin: 5px auto;
+  }
+
+  .login-heading h2 {
+    font-size: 27px;
+  }
+
+  .login-heading p {
+    margin-bottom: 15px;
+  }
+
+  .luminest-form-group {
+    margin-bottom: 11px;
+  }
+
+  .luminest-input-wrapper {
+    height: 43px;
+  }
+
+  .login-form-options {
+    margin-bottom: 13px;
+  }
+
+  .luminest-login-button {
+    height: 44px;
+  }
+
+  .login-security-note {
+    margin-top: 10px;
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) and (min-width: 651px) {
+  .luminest-login {
+    grid-template-columns: 48% 52%;
+  }
+
+  .login-visual {
+    padding: 28px 5%;
+  }
+
+  .login-form-panel {
+    padding: 25px;
+  }
+
+  .luminest-mark {
+    width: 70px;
+  }
+
+  .luminest-wordmark span {
+    font-size: 23px;
+    letter-spacing: 3px;
+  }
+
+  .login-hero-content h1 {
+    font-size: 38px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+  html,
+  body,
+  #root {
+    height: auto;
+    min-height: 100%;
+    overflow: auto;
+  }
+
+  .luminest-login {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .login-visual {
+    min-height: 320px;
+    height: 38vh;
+    max-height: 420px;
+    padding: 24px;
+    background-position: center 55%;
+  }
+
+  .luminest-mark {
+    width: 68px;
+    height: 50px;
+  }
+
+  .luminest-wordmark span {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .luminest-wordmark small {
+    font-size: 8px;
+    letter-spacing: 4px;
+  }
+
+  .login-hero-content {
+    margin-top: auto;
+    margin-bottom: 12px;
+  }
+
+  .login-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .login-hero-content p {
+    font-size: 14px;
+  }
+
+  .login-visual-footer {
+    display: none;
+  }
+
+  .login-form-panel {
+    min-height: auto;
+    padding: 25px 24px;
+  }
+
+  .login-top-brand {
+    display: none;
+  }
+
+  .login-form-container {
+    max-width: 440px;
+    margin: 10px auto 30px;
+  }
+
+  .login-heading h2 {
+    font-size: 30px;
+  }
+
+  .login-heading p {
+    margin-bottom: 25px;
+  }
+
+  .login-copyright {
+    padding-top: 12px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 380px) {
+  .login-form-panel {
+    padding: 22px 18px;
+  }
+
+  .login-form-options {
+    gap: 8px;
+  }
+
+  .remember-option,
+  .forgot-password-label {
+    font-size: 10px;
+  }
+
+  .login-hero-content h1 {
+    font-size: 31px;
+  }
+}
+/* ========================================
+   LOGIN FORM - SPACING REFINEMENT
+======================================== */
+
+@media (min-width: 769px) and (min-height: 721px) {
+
+  .login-form-container {
+    max-width: 410px;
+  }
+
+  .login-heading h2 {
+    margin-bottom: 16px !important;
+  }
+
+  .login-heading p {
+    margin-bottom: 36px !important;
+  }
+
+  .luminest-form-group {
+    margin-bottom: 24px !important;
+  }
+
+  .luminest-input-wrapper {
+    height: 52px !important;
+  }
+
+  .login-form-options {
+    margin: 10px 0 26px !important;
+  }
+
+  .login-security-note {
+    margin-top: 24px !important;
+  }
+}
+

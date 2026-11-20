@@ -1,0 +1,36 @@
+.attendance-report-page{width:100%;max-width:1500px;margin:0 auto;padding:4px 0 28px;color:#182230}
+.attendance-report-header{display:flex;align-items:flex-start;justify-content:space-between;gap:22px;margin-bottom:24px}
+.attendance-report-eyebrow{margin:0 0 8px;color:#64748b;font-size:11px;font-weight:800;letter-spacing:1.5px}
+.attendance-report-header h1{margin:0;font-size:clamp(25px,3vw,34px);line-height:1.2;color:#172033}
+.attendance-report-header>div:first-child>p:last-child{margin:9px 0 0;color:#64748b;font-size:14px}
+.attendance-shift-chip{display:flex;flex-direction:column;gap:5px;min-width:190px;padding:14px 17px;border:1px solid #dce5f0;border-radius:13px;background:#f8fafc}
+.attendance-shift-chip span{font-size:10px;letter-spacing:1.2px;font-weight:800;color:#64748b}
+.attendance-shift-chip strong{font-size:15px;color:#172033}.attendance-shift-chip small{color:#64748b;font-size:11px}
+.attendance-report-filters{display:flex;align-items:end;flex-wrap:wrap;gap:13px;padding:17px;margin-bottom:20px;background:#fff;border:1px solid #e4eaf1;border-radius:14px}
+.attendance-report-filters label{display:flex;flex-direction:column;gap:7px;min-width:155px;color:#475569;font-size:12px;font-weight:700}
+.attendance-report-filters input,.attendance-report-filters select{height:40px;min-width:155px;padding:0 11px;border:1px solid #d7e0ea;border-radius:8px;background:#fff;color:#1e293b;font:inherit;font-weight:500}
+.attendance-report-filters .attendance-employee-filter{min-width:220px;flex:1}.attendance-report-filters .attendance-employee-filter select{width:100%}
+.attendance-filter-button,.attendance-export-actions button{height:40px;padding:0 16px;border:0;border-radius:8px;background:#183b66;color:#fff;font-size:12px;font-weight:700;cursor:pointer}
+.attendance-filter-button:disabled,.attendance-export-actions button:disabled{opacity:.55;cursor:not-allowed}
+.attendance-report-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}
+.attendance-report-metric{display:flex;flex-direction:column;gap:8px;min-width:0;padding:18px;border:1px solid #e4eaf1;border-radius:13px;background:#fff}
+.attendance-report-metric>span{color:#64748b;font-size:12px;font-weight:700}.attendance-report-metric strong{color:#172033;font-size:25px;line-height:1.15;overflow-wrap:anywhere}.attendance-report-metric small{color:#8491a3;font-size:11px}
+.attendance-report-metric.blue{border-top:3px solid #3b82f6}.attendance-report-metric.orange{border-top:3px solid #f59e0b}.attendance-report-metric.purple{border-top:3px solid #8b5cf6}.attendance-report-metric.green{border-top:3px solid #10b981}
+.attendance-report-panel{min-width:0;margin-bottom:19px;padding:19px 0 0;border:1px solid #e4eaf1;border-radius:14px;background:#fff;overflow:hidden}
+.attendance-report-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 19px 15px}
+.attendance-report-panel-heading h2{margin:0;color:#1e293b;font-size:16px}.attendance-report-panel-heading p{margin:5px 0 0;color:#8491a3;font-size:12px}
+.attendance-report-table-scroll{width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.attendance-report-table{width:100%;min-width:740px;border-collapse:collapse;text-align:left}
+.attendance-report-table th{padding:12px 15px;background:#f8fafc;color:#64748b;font-size:10px;font-weight:800;letter-spacing:.55px;text-transform:uppercase;white-space:nowrap}
+.attendance-report-table td{padding:13px 15px;border-top:1px solid #edf1f5;color:#475569;font-size:12px;white-space:nowrap;vertical-align:middle}
+.attendance-report-table td strong{display:block;color:#243247;font-size:12px}.attendance-report-subtext{display:block;margin-top:4px;color:#94a3b8;font-size:10px}
+.attendance-report-empty{text-align:center!important;padding:28px!important;color:#94a3b8!important}
+.attendance-export-actions{display:flex;gap:8px;flex-wrap:wrap}.attendance-export-actions button{height:36px;padding:0 12px;font-size:11px}
+.attendance-export-actions button+button{background:#eaf0f7;color:#23415f}
+.attendance-flag,.attendance-session-status{display:inline-flex;padding:5px 8px;border-radius:20px;font-size:10px;font-weight:800}.attendance-flag.good{background:#e8f7ef;color:#16804a}.attendance-flag.warning{background:#fff4df;color:#a16207}.attendance-session-status.active{background:#e8f7ef;color:#16804a}.attendance-session-status.closed{background:#edf2f7;color:#64748b}
+.attendance-report-footnote{margin:4px 2px 0;color:#8995a5;font-size:11px;line-height:1.6}
+.attendance-report-error{margin-bottom:15px;padding:12px 14px;border:1px solid #fecaca;border-radius:9px;background:#fff1f2;color:#b91c1c;font-size:13px}
+.attendance-report-loading{padding:40px;text-align:center;color:#64748b}
+@media(max-width:900px){.attendance-report-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.attendance-report-header{flex-direction:column}.attendance-shift-chip{width:100%;box-sizing:border-box}}
+@media(max-width:560px){.attendance-report-metrics{grid-template-columns:1fr 1fr;gap:9px}.attendance-report-metric{padding:13px}.attendance-report-metric strong{font-size:20px}.attendance-report-filters{align-items:stretch}.attendance-report-filters label,.attendance-report-filters input,.attendance-report-filters select{width:100%;box-sizing:border-box}.attendance-filter-button{width:100%}.attendance-report-panel-heading{align-items:flex-start;flex-direction:column}.attendance-export-actions{width:100%}.attendance-export-actions button{flex:1}}
+@media print{.dashboard-sidebar,.dashboard-topbar,.attendance-report-filters,.attendance-export-actions{display:none!important}.dashboard-main,.dashboard-content{margin:0!important;padding:0!important;width:100%!important}.attendance-report-page{max-width:none;padding:0}.attendance-report-panel{break-inside:avoid;border:1px solid #cbd5e1;margin-bottom:12px}.attendance-report-table{min-width:0}.attendance-report-table th,.attendance-report-table td{padding:7px 6px;font-size:9px}.attendance-report-header h1{font-size:22px}.attendance-report-metrics{grid-template-columns:repeat(4,1fr)}.attendance-report-metric{padding:10px}.attendance-report-metric strong{font-size:17px}.attendance-report-footnote{font-size:9px}}

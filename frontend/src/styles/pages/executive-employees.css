@@ -1,0 +1,317 @@
+
+.ex-employee-page,
+.ex-employee-page * {
+  box-sizing: border-box;
+}
+
+.ex-employee-page {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  color: #1c2940;
+  min-width: 0;
+}
+
+.ex-employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.ex-employee-eyebrow {
+  margin: 0 0 8px;
+  color: #8190a8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.ex-employee-header h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.ex-employee-header p:last-child,
+.ex-employee-form-title p,
+.ex-employee-toolbar p {
+  margin: 0;
+  color: #8290a6;
+  font-size: 13px;
+}
+
+.ex-employee-primary,
+.ex-employee-secondary {
+  border-radius: 9px;
+  padding: 11px 16px;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ex-employee-primary {
+  background: #233b60;
+  color: white;
+  border: 1px solid #233b60;
+}
+
+.ex-employee-primary:hover {
+  background: #304f79;
+}
+
+.ex-employee-primary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.ex-employee-secondary {
+  background: white;
+  border: 1px solid #dce4ee;
+  color: #40516b;
+}
+
+.ex-employee-alert {
+  padding: 12px 15px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.ex-employee-alert.error {
+  background: #fff1f1;
+  color: #a33e3e;
+  border: 1px solid #f3d6d6;
+}
+
+.ex-employee-alert.success {
+  background: #effaf3;
+  color: #247447;
+  border: 1px solid #d5efdf;
+}
+
+.ex-employee-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.ex-employee-stats article,
+.ex-employee-form-card,
+.ex-employee-table-card {
+  background: #fff;
+  border: 1px solid #e4eaf3;
+  border-radius: 15px;
+  padding: 21px;
+  box-shadow: 0 5px 20px rgba(27, 45, 75, 0.03);
+}
+
+.ex-employee-stats article {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ex-employee-stats span {
+  font-size: 12px;
+  color: #7888a1;
+  font-weight: 700;
+}
+
+.ex-employee-stats strong {
+  font-size: 29px;
+  color: #1d2b43;
+}
+
+.ex-employee-form-title,
+.ex-employee-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.ex-employee-form-title h2,
+.ex-employee-toolbar h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.ex-employee-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.ex-employee-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #52627b;
+}
+
+.ex-employee-form input,
+.ex-employee-toolbar input,
+.ex-employee-toolbar select {
+  height: 42px;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  padding: 0 12px;
+  background: #fbfcfe;
+  color: #263650;
+  font: inherit;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.ex-employee-form input:focus,
+.ex-employee-toolbar input:focus,
+.ex-employee-toolbar select:focus {
+  outline: none;
+  border-color: #8da5c8;
+  box-shadow: 0 0 0 3px rgba(80, 116, 166, 0.09);
+}
+
+.ex-employee-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.ex-employee-toolbar {
+  margin-bottom: 18px;
+}
+
+.ex-employee-toolbar > div {
+  margin-right: auto;
+}
+
+.ex-employee-toolbar input {
+  width: min(300px, 35%);
+}
+
+.ex-employee-toolbar select {
+  width: 150px;
+}
+
+.ex-employee-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e7edf5;
+  border-radius: 11px;
+}
+
+.ex-employee-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.ex-employee-table th {
+  padding: 14px 15px;
+  background: #f7f9fc;
+  color: #7c8ca6;
+  font-size: 10px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.ex-employee-table td {
+  padding: 15px;
+  border-top: 1px solid #edf1f6;
+  color: #53637d;
+  font-size: 13px;
+}
+
+.ex-employee-table td strong {
+  color: #263650;
+}
+
+.ex-employee-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.ex-employee-status.on {
+  background: #eaf8ef;
+  color: #27804a;
+}
+
+.ex-employee-status.off {
+  background: #fff1f1;
+  color: #a34b4b;
+}
+
+.ex-employee-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.ex-employee-actions button {
+  border: 1px solid #dce4ee;
+  background: white;
+  color: #344a69;
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ex-employee-actions button.danger {
+  color: #a34848;
+  border-color: #f0d4d4;
+}
+
+.ex-employee-actions button.activate {
+  color: #247447;
+  border-color: #cfe9d8;
+}
+
+.ex-employee-empty {
+  padding: 30px;
+  text-align: center;
+  color: #8794a8;
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+  .ex-employee-page {
+    padding: 20px 15px;
+  }
+
+  .ex-employee-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ex-employee-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .ex-employee-form {
+    grid-template-columns: 1fr;
+  }
+
+  .ex-employee-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ex-employee-toolbar input,
+  .ex-employee-toolbar select {
+    width: 100%;
+  }
+
+  .ex-employee-form-actions {
+    grid-column: 1;
+  }
+}
