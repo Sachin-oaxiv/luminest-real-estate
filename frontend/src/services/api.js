@@ -1,10 +1,15 @@
+
 import axios from "axios";
 
-const api = axios.create({ baseURL: "http://localhost:5000/api/v1", withCredentials: true });
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api/v1",
+  withCredentials: true,
+});
 
 // Coordinates are refreshed by AuthProvider's browser geolocation watcher.
 api.interceptors.request.use((config) => {
   const raw = sessionStorage.getItem("insideSalesLocation");
+
   if (raw) {
     try {
       const location = JSON.parse(raw);
@@ -14,6 +19,7 @@ api.interceptors.request.use((config) => {
       sessionStorage.removeItem("insideSalesLocation");
     }
   }
+
   return config;
 });
 
