@@ -42,7 +42,17 @@ export const login = async (req, res) => {
     }
 
     const token = jwt.sign({ userId: user._id, role: user.role, attendanceId: attendance?._id?.toString() || null }, process.env.JWT_SECRET, { expiresIn: "1d" });
-    res.cookie("token", token, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax", maxAge: 24 * 60 * 60 * 1000 });
+    
+const isProduction = process.env.NODE_ENV === "production";
+
+        res.cookie("token", token, {
+          httpOnly: true,
+          secure: isProduction,
+          sameSite: isProduction ? "none" : "lax",
+          maxAge: 24 * 60 * 60 * 1000,
+          path: "/",
+        });
+
 
     const activePermission = user.role === "inside_sales"
       ? await SpecialPermission.findOne({ employee: user._id, status: "approved", startAt: { $lte: new Date() }, endAt: { $gt: new Date() } }).select("type endAt")
@@ -66,6 +76,15 @@ export const logout = async (req, res) => {
   } catch (error) {
     // Always clear the cookie, even if the token has expired.
   }
-  res.clearCookie("token", { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "lax" });
+  
+const isProduction = process.env.NODE_ENV === "production";
+
+      res.clearCookie("token", {
+        httpOnly: true,
+        secure: isProduction,
+        sameSite: isProduction ? "none" : "lax",
+        path: "/",
+      });
+
   return res.status(200).json({ success: true, message: "Logged out successfully" });
 };
